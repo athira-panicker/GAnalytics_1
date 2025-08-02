@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Signup</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <h1>Choose Your Plan</h1>
+
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Basic</h2>
+      <p class="price">$0 / month</p>
+      <ul>
+        <li>✔ Access to core features</li>
+        <li>✔ Email support</li>
+        <li>❌ No analytics</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Freemium</h2>
+      <p class="price">$49 / month</p>
+      <ul>
+        <li>✔ Everything in Basic</li>
+        <li>✔ Weekly reports</li>
+        <li>✔ Limited analytics</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Premium</h2>
+      <p class="price">$99 / month</p>
+      <ul>
+        <li>✔ Full access</li>
+        <li>✔ Priority support</li>
+        <li>✔ Full analytics dashboard</li>
+      </ul>
+    </div>
+  </div>
+
+  <form action="/signup" method="POST">
+    <h2>Sign Up</h2>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="plan">Select Plan</label>
+    <select id="plan" name="plan" required>
+      <option value="">-- Please choose --</option>
+      <option value="basic">Basic (Free)</option>
+      <option value="freemium">Freemium - $49/month</option>
+      <option value="premium">Premium - $99/month</option>
+    </select>
+
+    <button type="submit">Create Account</button>
+  </form>
+</body>
+</html>
