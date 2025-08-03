@@ -1,46 +1,23 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Premium Plan</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; }
-    form input, form button {
-      margin: 10px;
-      padding: 10px;
-      width: 250px;
-    }
-    form button {
-      background: #10b981;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .card {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Premium Plan</h1>
-    <p><strong>$99 / month</strong></p>
-    <ul style="text-align:left;">
-      <li>✔ Full access</li>
-      <li>✔ Priority Support</li>
-      <li>✔ Full analytics dashboard</li>
-    </ul>
-    <h2>Sign Up for Premium</h2>
-    <form action="/signup" method="POST">
-      <input type="hidden" name="plan" value="Premium">
-      <input type="text" name="name" placeholder="Full Name" required><br>
-      <input type="email" name="email" placeholder="Email Address" required><br>
-      <button type="submit">Sign Up</button>
-    </form>
-  </div>
+  <h1>Premium Plan Features</h1>
+  <ul>
+    <li>✔ Features for premium</li>
+  </ul>
+
+  <form action="/signup" method="POST">
+    <input type="hidden" name="plan" value="premium" />
+    <label for="name">Name:</label><br/>
+    <input type="text" name="name" required /><br/>
+    <label for="email">Email:</label><br/>
+    <input type="email" name="email" required /><br/>
+    <input type="submit" value="Sign Up" />
+  </form>
 </body>
 </html>

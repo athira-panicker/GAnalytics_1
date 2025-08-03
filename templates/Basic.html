@@ -1,46 +1,23 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Basic Plan</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 40px; }
-    form input, form button {
-      margin: 10px;
-      padding: 10px;
-      width: 250px;
-    }
-    form button {
-      background: #10b981;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .card {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
-  <div class="card">
-    <h1>Basic Plan</h1>
-    <p><strong>$0 / month</strong></p>
-    <ul style="text-align:left;">
-      <li>✔ Core Features</li>
-      <li>✔ Email Support</li>
-      <li>❌ No analytics</li>
-    </ul>
-    <h2>Sign Up for Basic</h2>
-    <form action="/signup" method="POST">
-      <input type="hidden" name="plan" value="Basic">
-      <input type="text" name="name" placeholder="Full Name" required><br>
-      <input type="email" name="email" placeholder="Email Address" required><br>
-      <button type="submit">Sign Up</button>
-    </form>
-  </div>
+  <h1>Basic Plan Features</h1>
+  <ul>
+    <li>✔ Features for basic</li>
+  </ul>
+
+  <form action="/signup" method="POST">
+    <input type="hidden" name="plan" value="basic" />
+    <label for="name">Name:</label><br/>
+    <input type="text" name="name" required /><br/>
+    <label for="email">Email:</label><br/>
+    <input type="email" name="email" required /><br/>
+    <input type="submit" value="Sign Up" />
+  </form>
 </body>
 </html>
