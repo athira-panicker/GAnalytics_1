@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Choose Your Plan</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; text-align: center; }
+    .pricing-container { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Select Your Pricing Plan</h1>
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Basic</h2>
+      <p>$0 / month</p>
+      <ul><li>✔ Core Features</li><li>✔ Email Support</li></ul>
+      <button onclick="window.location.href='/basic'">Choose Basic</button>
+    </div>
+    <div class="card">
+      <h2>Freemium</h2>
+      <p>$49 / month</p>
+      <ul><li>✔ Weekly Reports</li><li>✔ Limited Analytics</li></ul>
+      <button onclick="window.location.href='/freemium'">Choose Freemium</button>
+    </div>
+    <div class="card">
+      <h2>Premium</h2>
+      <p>$99 / month</p>
+      <ul><li>✔ Full Analytics</li><li>✔ Priority Support</li></ul>
+      <button onclick="window.location.href='/premium'">Choose Premium</button>
+    </div>
+  </div>
+</body>
+</html>
